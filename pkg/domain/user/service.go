@@ -4,7 +4,10 @@ package user
 type UserRepository interface {
 	GetAll() ([]User, error)
 	GetByID(id int) (*User, error)
+	// agregar UpdateUser
+	DeleteByID(id int) error
 }
+
 type UserService struct {
 	UserRepository UserRepository
 }

@@ -1,11 +1,19 @@
 package main
 
+import (
+	"canchitas-libres/pkg/domain/user"
+	"canchitas-libres/pkg/repository/user/storage"
+	"fmt"
+)
+
 func main() {
 
-	/*	var users []user.User
-		user := user.NewUser("lautaro", "olmedo", 1, time.Now(), "lautaroolmedo", "123", "admin")
-
-		users = append(users, user)
-		fmt.Println(len(users))*/
+	mongoRepository := storage.NewMongo()
+	//sliceRepository := storage.NewSlice()
+	userService := user.NewUserService(mongoRepository)
+	_, err := userService.GetUser()
+	if err != nil {
+		fmt.Println(err)
+	}
 
 }
