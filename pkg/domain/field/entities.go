@@ -46,3 +46,45 @@ func NewField(fieldType string, status int, fieldNumber int, fieldPrice float64)
 		FieldPrice:  fieldPrice,
 	}, nil
 }
+
+// Getters
+func (f *Field) GetFieldID() string {
+    return f.FieldID
+}
+
+func (f *Field) GetFieldType() string {
+    return f.FieldType
+}
+
+func (f *Field) GetStatus() int {
+    return f.Status
+}
+
+func (f *Field) GetFieldNumber() int {
+    return f.FieldNumber
+}
+
+func (f *Field) GetFieldPrice() float64 {
+    return f.FieldPrice
+}
+
+// Setters
+func (f *Field) SetFieldID(fieldID string) {
+    f.FieldID = fieldID
+}
+
+func (f *Field) SetFieldType(fieldType string) {
+    f.FieldType = fieldType
+}
+
+func (f *Field) SetStatus(status int) {
+    f.Status = status
+}
+
+func (f *Field) SetFieldNumber(fieldNumber int) {
+    f.FieldNumber = fieldNumber
+}
+
+func (f *Field) SetFieldPrice(fieldPrice float64) {
+    f.FieldPrice = fieldPrice
+}
